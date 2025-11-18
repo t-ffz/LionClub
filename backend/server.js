@@ -1,20 +1,18 @@
 const express = require('express');
-const axios = require('axios');
 const cors = require('cors');
 const fs = require('fs');
+const path = require('path');
 
 const app = express();
 app.use(cors());
 
-// TEMP: your developer access token — replace later
-const ACCESS_TOKEN = "YOUR_INSTAGRAM_ACCESS_TOKEN";
+// Serve profile images
+app.use('/profileimgs', express.static(path.join(__dirname, 'profileimgs')));
 
 // Load clubs.json
-const clubs = JSON.parse(fs.readFileSync('../clubs.json', 'utf8'));
+const clubs = JSON.parse(fs.readFileSync(path.join(__dirname, '../clubs.json'), 'utf8'));
 
-app.get('/clubs', (req, res) => {
-    res.json(clubs); // just return your JSON
-});
-
+// Return clubs JSON
+app.get('/clubs', (req, res) => res.json(clubs));
 
 app.listen(3000, () => console.log("Backend running on http://localhost:3000"));

@@ -1,17 +1,59 @@
+/* Hero section with fixed background */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-image: url('https://www.columbia.edu/content/sites/default/files/styles/cu_crop/public/content/Campus%20Images/Low_Library_NYC_skyline_night_lights.jpg?h=df0fa240&itok=M4yELnWC');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* makes it stay in place */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 35, 69, 0.535); /* sheer blue overlay */
+    z-index: 1;
+}
+
+.hero-text {
+    position: absolute;
+    bottom: 30px;
+    left: 50px;
+    color: white;
+    z-index: 2;
+}
+
+.hero-text p {
+    font-size: 10px;
+}
+
+
 .main-grid {
     display: grid;
     grid-template-columns: 195px auto;
+    margin-top: 0; /* grid starts below hero section */
+    position: relative;
+    z-index: 3;
+    padding: 1em; /* optional padding */
 }
 
 .filter-grid {
-    width: 150px;              
-    background-color: lightsteelblue;
-    padding: 1em;          
+    width: 160px;              
+    background-color: rgb(255, 255, 255);
+    padding: 0.5em;
+    border-radius: 10px;
+    border: 1px solid var(--item-border-color, rgba(0, 0, 0, 0.368)); /* added border */
+    margin-right: 10%;
+    margin-left: 0%;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); /* fr stands for fraction width */
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
     grid-auto-flow: row;
     gap: 1em;
     width: 100%; 
@@ -20,11 +62,103 @@
 .item {
     display: flex;
     flex-direction: column;
-    height: 300px;
-    
-    background-color: aliceblue;
-    color:darkslateblue;
+    height: 260px;
+    background-color: var(--item-bg-color, rgb(255, 255, 255)); /* default fallback */
+    color: darkslateblue;
     text-align: center;
     border-radius: 10px;
     font-size: 2em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.048);
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+
+    border: 1px solid var(--item-border-color, rgba(0, 0, 0, 0.368)); /* added border */
 }
+
+/* Profile picture */
+.profile-pic {
+    height: 50px;        /* smaller image */
+    width: 50px;
+    border-radius: 50%;  /* circular */
+    object-fit: cover;
+    margin-left: 2%;     /* optional spacing */
+}
+
+/* Flex container for image + text */
+.item > div {
+    display: flex;
+    align-items: flex-start;  /* top-align with image */
+    gap: 8px;                 /* space between image and text */
+    margin-top: 0;
+    margin-right: 2%;
+}
+
+/* Club name text */
+/* Club name text */
+.item > div > div {
+    font-size: 0.5em;
+    font-family: 'Fira Mono', monospace;       
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    margin: 0;
+    text-align: right;     /* you want this */
+    display: block;        /* allow full width */
+    width: 100%;  
+    text-decoration: underline;         /* ensures right-alignment works */
+}
+
+
+/* Description under club name */
+.item .description {
+    font-family: 'Fira Mono', monospace;
+    font-size: 0.4em;      /* adjust text size */
+    color: #444;            /* slightly muted color */
+    margin-top: 1px;        /* space from name */
+    text-align: left;
+    margin-left: 4%;        /* left-align text */
+    line-height: 1.2em;     /* improves readability */
+}
+
+.item-separator {
+    border: none;           /* remove default border */
+    border-top: 1px solid #ccc;  /* thin light gray line */
+    margin: 10px 5px;          /* spacing above and below */
+}
+
+.linktree-btn {
+    display: inline-block;
+    padding: 4px 8px;        /* smaller padding */
+    margin-top: 5%;           /* top spacing */
+    margin-bottom: 5px;      /* increased gap to next button */
+    background-color: #ffffff8a;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.5em;
+    font-family: 'Fira Mono', monospace;     /* smaller text */
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.3);  /* added border */
+}
+
+.events-btn {
+    display: inline-block;
+    padding: 4px 8px;        /* smaller padding */
+    margin-top: 0;            /* gap controlled by Linktree's margin-bottom */
+    background-color: #e5f0ff69;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 0.5em;
+    font-family: 'Fira Mono', monospace;          /* smaller text */
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.3);  /* added border */
+}
+
+
+
+
+
+
