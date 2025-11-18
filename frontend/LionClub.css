@@ -59,10 +59,11 @@
     width: 100%; 
 }
 
+/* grid box */
 .item {
     display: flex;
     flex-direction: column;
-    height: 260px;
+    height: 260px; /* fixed in js */
     background-color: var(--item-bg-color, rgb(255, 255, 255)); /* default fallback */
     color: darkslateblue;
     text-align: center;
@@ -98,8 +99,8 @@
 /* Club name text */
 .item > div > div {
     font-size: 0.5em;
-    font-family: 'Fira Mono', monospace;       
-    font-weight: bold;
+    font-family: 'Google Sans Code', sans-serif;     
+    
     color: rgb(0, 0, 0);
     cursor: pointer;
     margin: 0;
@@ -112,7 +113,7 @@
 
 /* Description under club name */
 .item .description {
-    font-family: 'Fira Mono', monospace;
+    font-family: 'Google Sans Code', sans-serif;
     font-size: 0.4em;      /* adjust text size */
     color: #444;            /* slightly muted color */
     margin-top: 1px;        /* space from name */
@@ -128,35 +129,83 @@
 }
 
 .linktree-btn {
-    display: inline-block;
-    padding: 4px 8px;        /* smaller padding */
-    margin-top: 5%;           /* top spacing */
-    margin-bottom: 5px;      /* increased gap to next button */
+    display: block;                 /* changed */
+    width: 100%;                    /* added */
+    box-sizing: border-box;         /* added */
+
+    padding: 4px 8px;
+    margin-top: 1em;
+    margin-bottom: 2px;
     background-color: #ffffff8a;
     color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.5em;
-    font-family: 'Fira Mono', monospace;     /* smaller text */
+    font-family: 'Google Sans Code', sans-serif;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.3);  /* added border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.btn-group {
+    display: flex;                  /* changed */
+    flex-direction: column;         /* keep vertical stacking */
+    margin-top: auto;
+    width: 100%;                    /* ensures buttons stretch equally */
 }
 
 .events-btn {
-    display: inline-block;
-    padding: 4px 8px;        /* smaller padding */
-    margin-top: 0;            /* gap controlled by Linktree's margin-bottom */
+    display: block;                 /* changed */
+    width: 100%;                    /* added */
+    box-sizing: border-box;         /* added */
+
+    padding: 4px 8px;
+    margin-top: 0;
+    margin-bottom: 0;
     background-color: #e5f0ff69;
     color: rgb(0, 0, 0);
     text-decoration: none;
     border-radius: 5px;
     font-size: 0.5em;
-    font-family: 'Fira Mono', monospace;          /* smaller text */
+    font-family: 'Google Sans Code', sans-serif;
     text-align: center;
     cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.3);  /* added border */
+    border: 1px solid rgba(0, 0, 0, 0.3);
 }
 
+
+/* POP-UP */
+.club-title {
+    font-family: 'Google Sans Code', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #2a2a2a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header-strip {
+    background-color: #001945;
+    padding: 15px 10px;
+    text-align: center;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.header-strip h2 {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.recent-events {
+    color: black;
+    font-family: 'Google Sans Code', sans-serif;
+    text-decoration: underline;  
+    margin-top: 3%;
+    font-size: 20px;
+    font-weight: 700;
+}
 
 
 
