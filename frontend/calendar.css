@@ -1,0 +1,15 @@
+/* Google Calendar link styling */
+.gcal-link {
+    display: none;        /* hide by default */
+    font-size: 0.8em;
+    color: #fff;
+    background-color: #4285F4; /* Google blue */
+    padding: 2px 5px;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-top: 2px;
+}
+
+.gcal-link:hover {
+    background-color: #3367D6; /* slightly darker on hover */
+}
