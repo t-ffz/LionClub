@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 /* Google Calendar link styling */
 .gcal-link {
     display: none;        /* hide by default */
@@ -13,7 +12,8 @@
 
 .gcal-link:hover {
     background-color: #3367D6; /* slightly darker on hover */
-=======
+}
+
 /* MAIN LAYOUT */
 .main-container {
     display: flex;
@@ -92,5 +92,4 @@
     .sidebar {
         width: 100%;
     }
->>>>>>> e9b902acbe76ba353654242a804a099b7b8ffc1f
 }
