@@ -2,7 +2,7 @@ let clubsData = []; // store all clubs for filtering
 
 async function loadClubs() {
     try {
-        const response = await fetch('https://lionclub.onrender.com/');
+        const response = await fetch('https://lionclub.onrender.com/clubs');
         const clubs = await response.json();
         clubs.sort((a, b) => a.name.localeCompare(b.name));
         clubsData = clubs; // save for search
