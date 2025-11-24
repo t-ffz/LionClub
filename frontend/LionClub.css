@@ -224,12 +224,12 @@
     text-align: center;
     border-radius: 10px;
     font-size: 2em;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.048);
+    box-shadow: 0 4px 6px rgba(161, 161, 161, 0.048);
     overflow: hidden;
     padding: 10px;
     box-sizing: border-box;
 
-    border: 1px solid var(--item-border-color, rgba(0, 0, 0, 0.368)); /* added border */
+    border: 1px solid var(--item-border-color, rgba(0, 0, 0, 0.147)); /* added border */
 }
 
 /* Profile picture */
@@ -298,7 +298,7 @@
     font-size: 0.5em;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.13);
 }
 
 .btn-group {
@@ -324,7 +324,7 @@
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     cursor: pointer;
-    border: 1px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.153);
 }
 
 
