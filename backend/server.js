@@ -6,6 +6,9 @@ const path = require('path');
 const app = express();
 app.use(cors());
 
+// Serve public folder (NEW)
+app.use(express.static(path.join(__dirname, 'public')));
+
 // Serve profile images
 app.use('/profileimgs', express.static(path.join(__dirname, 'profileimgs')));
 
